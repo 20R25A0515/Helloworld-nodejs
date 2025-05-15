@@ -15,7 +15,7 @@ jobs: #<-- starts the job encapsulation
        run: npm install
      - name: install dependencies
        run: npm ci
-     - name: run build
+     - name: build
        run: npm run build
     #<--step are end with in build job
   #<-- end of build job encapsulation
@@ -33,7 +33,7 @@ jobs: #<-- starts the job encapsulation
        run: npm install
      - name: install dependencies
        run: npm ci
-     - name: run test
+     - name: Test
        run: npm test
     #<--end of steps in test job
   #<-- end of test job encapsulation

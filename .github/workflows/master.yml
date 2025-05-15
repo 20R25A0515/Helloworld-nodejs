@@ -6,9 +6,9 @@ jobs: #<-- starts the job encapsulation
     runs-on: ubuntu-latest
     steps: #start steps encapsulation with in 'build' job
      - name: Checkout code
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: setup node.js
-       uses: action/setup-node@v4
+       uses: actions/setup-node@v4
        with: 
          node-version: 14
      - name: Run install
@@ -24,9 +24,9 @@ jobs: #<-- starts the job encapsulation
     runs-on: ubuntu-latest
     steps: #start steps encapsulation with in the 'test' job
      - name: checkout test code
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: setup node.js
-       uses: action/setup-node@v4
+       uses: actions/setup-node@v4
        with:
         node-version: 14
      - name: install node modules

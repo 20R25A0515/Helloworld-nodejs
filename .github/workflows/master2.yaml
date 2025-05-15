@@ -19,6 +19,6 @@ jobs: #<-- starts the job encapsulation
        run: npm run build
      - name: Deploy
        run: npm run deploy
-       if: github.ref=='refs/head/master'&& github.event_name == 'pus'
+       if: github.ref=='refs/head/master'&& github.event_name == 'push'
     #<--step are end with in build job
   #<-- end of build job encapsulation

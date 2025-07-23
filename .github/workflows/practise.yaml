@@ -1,0 +1,25 @@
+name: Certification Practice
+
+on:
+  workflow_dispatch
+
+env:
+  USER_NAME: Bhanu
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet
+        run: echo "Hello $USER_NAME "
+
+      - name: Show current branch
+        run: echo "Running on branch:${{ github.ref }}"
+
+      - name: Upload test report
+        run: echo "Report Data" > report.txt
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-report
+          path: report.txt
